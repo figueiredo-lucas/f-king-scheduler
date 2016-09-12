@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>scheduler</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- bower:css -->
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+        <!-- endbower -->
+        <!-- bower:js -->
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="../bower_components/moment/moment.js"></script>
+        <script src="../bower_components/lodash/lodash.js"></script>
+        <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <!-- endbower -->
+        <script src="js/moment-with-locales.js"></script>
+        <script src="app.js"></script>
+        <script src="modules/CalendarService.js"></script>
+        <script src="modules/scheduler/scheduler.directive.js"></script>
+        <script src="modules/monthly/monthly.directive.js"></script>
+        <script src="modules/weekly/weekly.directive.js"></script>
+        <style>
+            body, html {
+                height: 100vh;
+            }
+            
+            .ellipsis {
+                text-overflow: ellipsis;
+            }
+            
+            .full-height, .container-height {
+                height: 100%;
+            }
+            
+            td.altura-5-col {
+                height: 19%;
+            }
+
+            td.altura-6-col {
+                height: 15.833333%;
+            }
+            
+            td.altura-week {
+                height: 95%;
+            }
+            
+            .panel-height {
+                height: 85%;
+                overflow-y: hidden;
+                overflow-x: scroll;
+            }
+
+            .absolute-number {
+                color: #B8B8B8;
+                position: relative;
+                float: right;
+                z-index: 0;
+            }
+
+            .absolute-number-week {
+                color: #B8B8B8;
+                display:block;
+                text-align: right;
+            }
+
+        </style>
+    </head>
+    <body ng-app="f.scheduler">
+    <f-king-scheduler>
+        <f-king-monthly></f-king-monthly>
+        <f-king-weekly></f-king-weekly>
+    </f-king-scheduler>
+</body>
+</html>

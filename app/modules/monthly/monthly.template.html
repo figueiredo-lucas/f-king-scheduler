@@ -1,0 +1,20 @@
+<table class="table table-bordered table-striped full-height" ng-show="key.active">
+    <tr>
+        <th ng-repeat="wd in weekdays"
+            class="bg-primary hidden-xs hidden-sm"
+            ng-class="getHeaderClass($first, $last, false)">
+            {{wd}}
+        </th>
+        <th ng-repeat="wd in abbrWeekdays"
+            class="bg-primary hidden-lg hidden-md"
+            ng-class="getHeaderClass($first, $last, true)">
+            {{wd}}
+        </th>
+    </tr>
+    <tr ng-repeat="week in calendar">
+        <td ng-repeat="day in week track by $index" ng-class="getClass($first, $last, day.date)">
+            <span class="absolute-number">{{day.date.date()}}</span>
+            <a href="#" ng-repeat="app in day.appointments"><span class="badge">{{app}}</span></a>
+        </td>
+    </tr>
+</table>

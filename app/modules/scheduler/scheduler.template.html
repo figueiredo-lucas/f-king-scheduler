@@ -1,0 +1,32 @@
+<div class="container-fluid container-height">
+    <fieldset class="full-height">
+        <legend>
+            <span class="center-block text-center">
+                <span
+                    class="btn btn-default glyphicon glyphicon-menu-left pull-left"
+                    ng-click="changePage(false)"
+                    tooltip-placement="right"
+                    uib-tooltip="Anterior"></span>
+                {{today.format("MMMM [de] YYYY")}}
+                <span ng-repeat="directive in registeredDirectives">
+                    <span
+                        class="btn btn-default {{directive.key.icon}}"
+                        ng-show="!directive.key.active"
+                        ng-click="changeType(directive.key)"
+                        tooltip-placement="bottom"
+                        uib-tooltip="{{directive.key.name}}"></span>
+                </span>
+                <span
+                    class="btn btn-default glyphicon glyphicon-menu-right pull-right"
+                    ng-click="changePage(true)"
+                    tooltip-placement="left"
+                    uib-tooltip="Próximo"></span>
+            </span>
+        </legend>
+
+
+        <div class="panel panel-primary panel-height">
+            <ng-transclude></ng-transclude>
+        </div>
+    </fieldset>
+</div>
