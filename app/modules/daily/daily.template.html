@@ -1,0 +1,27 @@
+<div>    
+    <div class="daily" ng-show="!dailyShown">
+        <div class="daily-span"></div>
+        <div class="div-helper">
+            <div class="div-button">
+                <span class="btn btn-info glyphicon glyphicon-menu-left" ng-click="dailyShown = true"></span>
+            </div>
+        </div>
+    </div>
+    <div class="daily-backdrop full-height" ng-show="dailyShown" ng-click="dailyShown = false">
+    </div>
+    <table class="table table-bordered table-striped full-height daily-table" ng-show="dailyShown">
+        <tr>
+            <th class="bg-primary col-md-12">
+                {{day.format("dddd[,] DD [de] MMMM")}}
+                <button type="button" class="close" aria-label="Close" ng-click="dailyShown = false">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </th>
+        </tr>
+        <tr>
+            <td class="altura-week">
+                <a href="#" ng-repeat="appoint in day.appointments"><div class="well well-sm well-margin">Fulano de tal - {{appoint}}</div></a>
+            </td>
+        </tr>
+    </table>
+</div>

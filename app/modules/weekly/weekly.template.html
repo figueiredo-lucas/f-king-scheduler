@@ -1,12 +1,12 @@
 <table class="table table-bordered table-striped full-height" ng-show="key.active">
     <tr>
         <th ng-repeat="wd in weekdays"
-            class="bg-primary hidden-xs"
+            class="bg-primary hidden-xs hidden-sm"
             ng-class="getHeaderClass($first, $last)">
             {{wd}}
         </th>
         <th ng-repeat="wd in abbrWeekdays"
-            class="bg-primary hidden-md"
+            class="bg-primary hidden-lg hidden-md"
             ng-class="getHeaderClass($first, $last)">
             {{wd}}
         </th>
@@ -14,7 +14,7 @@
     <tr>
         <td ng-repeat="day in week track by $index" ng-class="getClass($first, $last, day.date)" class="altura-week">
             <span class="absolute-number-week">{{day.date.date()}}</span>
-            <a href="#" ng-repeat="appoint in day.appointments"><div class="well well-sm">Fulano de tal - {{appoint}}</div></a>
+            <a href="#" ng-repeat="appoint in day.appointments"><div class="well well-sm well-margin">Fulano de tal - {{appoint}}</div></a>
         </td>
     </tr>
 </table>
