@@ -13,7 +13,7 @@ angular.module('f.scheduler').directive('fKingMonthly', [
                 scope.key = CalendarService.directiveConstants.MONTHLY;
                 ctrl.registerDirective(scope);
                 scope.calendar = CalendarService.createCalendar(ctrl.today.clone());
-                scope.calendar[1][1].appointments = ['08:15', '10:15', '12:20', '14:45', '16:20', '18:45'];
+                scope.calendar[1][1].appointments = ['08:15', '10:15'];
                 scope.calendar[1][2].appointments = ['08:15', '10:15'];
                 scope.calendar[1][3].appointments = ['08:15', '10:15'];
                 scope.calendar[2][1].appointments = ['08:15', '10:15'];

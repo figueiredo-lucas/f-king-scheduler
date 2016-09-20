@@ -1,0 +1,114 @@
+body, html {
+    height: 100vh;
+}
+
+.full-height, .container-height {
+    height: 100%;
+    min-height: 100%;
+}
+
+td.altura-5-col {
+    height: 19%;
+}
+
+td.altura-6-col {
+    height: 15.833333%;
+}
+
+td.altura-week {
+    height: 95%;
+}
+
+.panel-height {
+    height: 85%;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.absolute-number {
+    color: #B8B8B8;
+    position: relative;
+    float: right;
+    z-index: 0;
+}
+
+.absolute-number-week {
+    color: #B8B8B8;
+    display:block;
+    text-align: right;
+}
+
+.daily {
+    width: 5%;
+    height: 100vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /*z-index: 999;*/
+    border: none;
+    background: transparent;
+    overflow: hidden;
+}
+
+.daily-span {
+    height: 40%;
+}
+
+.daily .div-helper .div-button {
+    height: 100%;
+    background: #d9edf7;
+    opacity: 0.8;
+    width: 90%;
+    left: 100%;
+    position: absolute;
+    transition: left 0.8s, box-shadow 0.8s;
+    text-align: center;
+    border-radius: 50% 0% 0% 50%;
+}
+
+.daily .div-helper .div-button:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.daily .div-helper {
+    height: 20%;
+    background: transparent;
+    width: 100%;
+    position: absolute;
+}
+
+.daily .div-helper:hover .div-button {
+    left: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: left 0.8s, box-shadow 0s;
+}
+
+.daily-table {
+    width: 25%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    background: white;
+}
+
+.daily-backdrop {
+    width: 75%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    background: #000000;
+    opacity: 0.6;
+}
+
+.well-margin {
+    margin-bottom: 5px;
+}
+
+.table-margin {
+    margin-bottom: 0px;
+}

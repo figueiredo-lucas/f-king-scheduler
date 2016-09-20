@@ -6,6 +6,7 @@ angular.module('f.scheduler').directive('fKingScheduler', [
             templateUrl: 'modules/scheduler/scheduler.template.html',
             restrict: 'E',
             transclude: true,
+            replace: true,
             scope: {},
             controller: function ($scope) {
                 this.today = moment();
