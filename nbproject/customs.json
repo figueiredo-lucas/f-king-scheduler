@@ -1,6 +1,10 @@
 {
     "elements": {
-        "f-king-daily": {},
+        "f-king-daily": {
+            "attributes": {
+                "appointments": {}
+            }
+        },
         "f-king-scheduler": {},
         "f-king-monthly": {},
         "f-king-weekly": {}

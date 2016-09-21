@@ -44,7 +44,6 @@ td.altura-week {
     position: absolute;
     bottom: 0;
     right: 0;
-    /*z-index: 999;*/
     border: none;
     background: transparent;
     overflow: hidden;
@@ -59,11 +58,16 @@ td.altura-week {
     background: #d9edf7;
     opacity: 0.8;
     width: 90%;
-    left: 100%;
+    left: 80%;
     position: absolute;
-    transition: left 0.8s, box-shadow 0.8s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: left 0.8s;
     text-align: center;
     border-radius: 50% 0% 0% 50%;
+}
+
+.daily .div-helper:hover .div-button {
+    left: 10%;
 }
 
 .daily .div-helper .div-button:before {
@@ -80,12 +84,6 @@ td.altura-week {
     position: absolute;
 }
 
-.daily .div-helper:hover .div-button {
-    left: 10%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: left 0.8s, box-shadow 0s;
-}
-
 .daily-table {
     width: 25%;
     position: absolute;
@@ -93,6 +91,7 @@ td.altura-week {
     right: 0;
     margin: 0;
     background: white;
+    z-index: 2;
 }
 
 .daily-backdrop {
@@ -103,12 +102,13 @@ td.altura-week {
     margin: 0;
     background: #000000;
     opacity: 0.6;
+    z-index: 2;
 }
 
 .well-margin {
     margin-bottom: 5px;
 }
 
-.table-margin {
-    margin-bottom: 0px;
+.span-z-index {
+    z-index: 1;
 }

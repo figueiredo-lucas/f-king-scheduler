@@ -20,7 +20,11 @@
         </tr>
         <tr>
             <td class="altura-week">
-                <a href="#" ng-repeat="appoint in day.appointments"><div class="well well-sm well-margin">Fulano de tal - {{appoint}}</div></a>
+                <a href="#" ng-repeat="appoint in day.appointments">
+                    <div class="well well-sm well-margin">
+                        {{(appoint.description ? appoint.description + ' - ' : '') + appoint.hour}}
+                    </div>
+                </a>
             </td>
         </tr>
     </table>
